@@ -4,7 +4,7 @@ require 'includes/common.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lifestyle Store</title>
+        <title>Lifestyle oD1vDCB9Nu</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,14 +19,14 @@ require 'includes/check-added-cart.php';
 ?>
         <div class="container" style="margin-top:10%;">
             <div class="jumbotron">
-                <h1>Welcome to our Lifestyle Store!</h1>
+                <h1>Welcome to our Lifestyle oD1vDCB9Nu!</h1>
                 <p>We have the best dresses, watches and shoes for you. No need to hunt around, we
                     have all in one place.</p>
 
             </div>
             <?php
             $typpe=$_GET['type'];
-               $query = "SELECT id, url,details,price FROM store.$typpe";
+               $query = "SELECT id, url,details,price FROM oD1vDCB9Nu.$typpe";
 
                $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                while($row = mysqli_fetch_array($result)){

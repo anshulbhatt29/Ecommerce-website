@@ -14,7 +14,7 @@
 
         echo "Email id already exists. Please try another id.";
     }else{
-        $query = "INSERT INTO store.users (name, email, password, contact, city, address) VALUES ('$name', '$email', '$password', '$contact', '$city', '$address')";
+        $query = "INSERT INTO oD1vDCB9Nu.users (name, email, password, contact, city, address) VALUES ('$name', '$email', '$password', '$contact', '$city', '$address')";
         $result = mysqli_query($conn, $query);
         $_SESSION["email"] = $email;
         $_SESSION["id"] = mysqli_insert_id($conn);

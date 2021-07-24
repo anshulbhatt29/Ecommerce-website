@@ -17,7 +17,7 @@
        <?php
        require 'includes/header.php';
        $user_id = $_SESSION["id"];
-       $query = "SELECT p.id, p.details, p.price ,up.quantity,up.timeoforder FROM store.shop p INNER JOIN store.users_shop up ON up.item_id = p.id WHERE up.user_id = '$user_id' AND up.status = 'Added to cart'";
+       $query = "SELECT p.id, p.details, p.price ,up.quantity,up.timeoforder FROM oD1vDCB9Nu.shop p INNER JOIN oD1vDCB9Nu.users_shop up ON up.item_id = p.id WHERE up.user_id = '$user_id' AND up.status = 'Added to cart'";
 
        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
        

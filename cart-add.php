@@ -9,7 +9,7 @@
     if(isset($_POST['submit']))
     {
         $quan=$_POST['quantity'];
-        $query = "INSERT INTO store.users_shop(user_id, item_id,quantity, status,timeoforder) VALUES('$user_id', '$item_id','$quan', 'Added to cart',CURRENT_TIMESTAMP())";
+        $query = "INSERT INTO oD1vDCB9Nu.users_shop(user_id, item_id,quantity, status,timeoforder) VALUES('$user_id', '$item_id','$quan', 'Added to cart',CURRENT_TIMESTAMP())";
 
               $query_result = mysqli_query($conn, $query)or die(mysqli_error($conn));
               $type=$type."?type=".$ty;

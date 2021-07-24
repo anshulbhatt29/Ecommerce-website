@@ -3,11 +3,11 @@ require 'includes/common.php';
 $email=mysqli_real_escape_string($conn,$_POST['email']);
 $password=mysqli_real_escape_string($conn,$_POST['password']);//This removes special characters from string.
 $password=md5($password);
-$query="SELECT * FROM store.users WHERE email='$email' AND password='$password' ";
+$query="SELECT * FROM oD1vDCB9Nu.users WHERE email='$email' AND password='$password' ";
 $query_result=mysqli_query($conn, $query);
 if(mysqli_num_rows($query_result)==0)
 {
-    $query="SELECT * FROM store.users WHERE email='$email' ";
+    $query="SELECT * FROM oD1vDCB9Nu.users WHERE email='$email' ";
     $query_result=mysqli_query($conn,$query);
     if(mysqli_num_rows($query_result)==0)
     {

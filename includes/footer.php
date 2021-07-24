@@ -6,7 +6,7 @@
   width: 100%;
   bottom: 0;" >
       <center >
-          <p>Copyright © Lifestyle Store. All Rights Reserved </p>
+          <p>Copyright © Lifestyle oD1vDCB9Nu. All Rights Reserved </p>
       </center>
 
 
