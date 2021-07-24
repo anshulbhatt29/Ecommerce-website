@@ -46,7 +46,7 @@ if(!isset($_SESSION["email"])){
        ?>
        <div id="contai">
            <div id="main">
-          <div class="container panel-margin" >
+          <div class="container panel-margin"style="margin-top:100px" >
              <div class="alert alert-success">
                <p><?php echo  $m;?></p>
 
