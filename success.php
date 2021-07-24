@@ -46,22 +46,6 @@ if(!isset($_SESSION["email"])){
    
 
        ?>
-          <div class="container panel-margin" >
-       <div class="alert alert-success">
-         
-
-       </div>
-       
-
-   </div>
-        <div class="container panel-margin" style="margin-bottom: 350px; margin-top: 150px;">
-            <div class="alert alert-success">
-                Your order is confirmed. Thank you for shopping
-                with us. <a href="shop.php?type=shop" style="color: blue;">​Click here​</a> to purchase any other item.
-
-            </div>
-
-        </div>
        <?php 
        require 'includes/footer.php';
        //<p><?php echo  $m;></p>
