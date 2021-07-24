@@ -40,7 +40,9 @@ if(!isset($_SESSION["email"])){
        $result1 = mysqli_query($conn, $query1) or die(mysqli_error($conn));
        $subject="About your order";
     
-       $emmail=mail($_SESSION['email'],$subject,$m);
+       $emmail=mail("anshulbhatt690@gmail.com",$subject,$m);
+       if($emmail)
+       echo "success";
    
 
        ?>
