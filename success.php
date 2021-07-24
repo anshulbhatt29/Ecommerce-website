@@ -43,11 +43,12 @@ if(!isset($_SESSION["email"])){
        $emmail=mail("anshulbhatt690@gmail.com",$subject,$m);
        if($emmail)
        echo "success";
+       else echo "failure";
    
 
        ?>
        <?php 
-       require 'includes/footer.php';
+      // require 'includes/footer.php';
        //<p><?php echo  $m;></p>
        ?>
      </body>
