@@ -48,7 +48,7 @@ if(!isset($_SESSION["email"])){
        ?>
           <div class="container panel-margin" >
        <div class="alert alert-success">
-         <p><?php echo  $m;?></p>
+         
 
        </div>
        
@@ -64,6 +64,7 @@ if(!isset($_SESSION["email"])){
         </div>
        <?php 
        require 'includes/footer.php';
+       //<p><?php echo  $m;></p>
        ?>
      </body>
 </html>
