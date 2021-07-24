@@ -38,16 +38,16 @@ if(!isset($_SESSION["email"])){
        }
        $query1 = "  DELETE FROM oD1vDCB9Nu.users_shop  WHERE user_id ='$user_id' ";
        $result1 = mysqli_query($conn, $query1) or die(mysqli_error($conn));
-       $subject="About your order";
+       $subject='About your order';
        $headers = 'From: anshulbhatt690@gmail.com'       . "\r\n" .
        'Reply-To: anshulbhatt690@gmail.com' . "\r\n" .
        'X-Mailer: PHP/' . phpversion();
-       echo $_SESSION['email'];
-    
-       $emmail=mail($_SESSION['email'],$subject,$m,$headers);
+       $em=$_SESSION['email'];
+       $emmail=mail($em,$subject,$m,$headers);
        if($emmail)
        echo "success";
        else echo "failure";
+       echo $emmail;
 
    ?>
        <?php 
