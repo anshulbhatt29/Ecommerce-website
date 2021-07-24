@@ -28,6 +28,8 @@
        }else{
            $total = 0;
    ?>
+      <div id="contai">
+           <div id="main">
         <div class="container " style="margin-top: 10%;margin-bottom:20%; width:100%">
             <table style="border: 5px solid black; border-collapse: collapse ;width: 60%; margin-left: 20%;" class=" table table-hover">
                 <tbody>
@@ -50,10 +52,24 @@
             </table>
 
         </div>
+                    </div>
+                    </div>
         <?php
        }
-       require 'includes/footer.php';
+      
        ?>
+          <footer style="background-color: #101010;
+  color: #9d9d9d;
+  width: 100%;
+  margin-top:-100px;
+  clear:both;
+  position:relative;" >
+  <div>
+      <center >
+          <p>Copyright © Lifestyle store. All Rights Reserved </p>
+      </center>
+  </div>
+</footer>
        
         </body>
     

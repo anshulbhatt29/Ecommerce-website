@@ -14,9 +14,7 @@ if(!isset($_SESSION["email"])){
     </head>
     <body style="height:100%">
     <?php 
-
-  
-      
+    require'includes/header.php';      
        $user_id = $_SESSION["id"];
        $query = "SELECT item_id FROM oD1vDCB9Nu.users_shop WHERE user_id = '$user_id'";
        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -30,7 +28,7 @@ if(!isset($_SESSION["email"])){
            $r1=mysqli_query($conn, $query2) or die(mysqli_error($conn));
            $roww= mysqli_fetch_array($r);
            $roww1= mysqli_fetch_array($r1);
-           $m1= $roww['details']."   "."quantity: ".$roww1['quantity']."   "." time of order :"."   ".$roww1['timeoforder']."<br>";
+           $m1= $roww['details']."&nbsp ;"."quantity: ".$roww1['quantity']." &nbsp;  "." time of order :"." &nbsp; ".$roww1['timeoforder']."<br>";
            $m=$m.$m1;
          
            $query1 = "UPDATE oD1vDCB9Nu.users_shop SET status = 'Confirmed' WHERE item_id = '$item_id'";
