@@ -42,6 +42,7 @@ if(!isset($_SESSION["email"])){
        $headers = 'From: anshulbhatt690@gmail.com'       . "\r\n" .
        'Reply-To: anshulbhatt690@gmail.com' . "\r\n" .
        'X-Mailer: PHP/' . phpversion();
+       echo $_SESSION['email'];
     
        $emmail=mail($_SESSION['email'],$subject,$m,$headers);
        if($emmail)
