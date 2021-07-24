@@ -28,7 +28,7 @@ if(!isset($_SESSION["email"])){
            $r1=mysqli_query($conn, $query2) or die(mysqli_error($conn));
            $roww= mysqli_fetch_array($r);
            $roww1= mysqli_fetch_array($r1);
-           $m1= $roww['details']."&nbsp;"."quantity:"."&nbsp;".$roww1['quantity']." &nbsp;  "." time of order :"." &nbsp; ".$roww1['timeoforder']."<br>";
+           $m1= $roww['details']." &nbsp; "."quantity:"."&nbsp;".$roww1['quantity']." &nbsp;  "." time of order :"." &nbsp; ".$roww1['timeoforder']."<br>";
            $m=$m.$m1;
          
            $query1 = "UPDATE oD1vDCB9Nu.users_shop SET status = 'Confirmed' WHERE item_id = '$item_id'";
