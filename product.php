@@ -5,7 +5,6 @@ require 'includes/common.php';
 <html>
     <head>
         <title>Lifestyle store</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -27,7 +26,7 @@ require 'includes/check-added-cart.php';
             </div>
             <?php
             $typpe=$_GET['type'];
-               $query = "SELECT id, url,details,price FROM oD1vDCB9Nu.$typpe";
+               $query = "SELECT id, url,details,price FROM sql6439142.$typpe";
 
                $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                while($row = mysqli_fetch_array($result)){

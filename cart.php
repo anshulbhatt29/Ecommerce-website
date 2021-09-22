@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -18,7 +17,7 @@
        <?php
        require 'includes/header.php';
        $user_id = $_SESSION["id"];
-       $query = "SELECT p.id, p.details, p.price ,up.quantity,up.timeoforder FROM oD1vDCB9Nu.shop p INNER JOIN oD1vDCB9Nu.users_shop up ON up.item_id = p.id WHERE up.user_id = '$user_id' AND up.status = 'Added to cart'";
+       $query = "SELECT p.id, p.details, p.price ,up.quantity,up.timeoforder FROM sql6439142.shop p INNER JOIN sql6439142.users_shop up ON up.item_id = p.id WHERE up.user_id = '$user_id' AND up.status = 'Added to cart'";
 
        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
        

@@ -9,7 +9,7 @@
     if(isset($_POST['submit']))
     {
         $quan=$_POST['quantity'];
-        $query = "INSERT INTO oD1vDCB9Nu.users_shop(user_id, item_id,quantity, status,timeoforder) VALUES('$user_id', '$item_id','$quan', 'Added to cart',CURRENT_TIMESTAMP())";
+        $query = "INSERT INTO sql6439142.users_shop(user_id, item_id,quantity, status,timeoforder) VALUES('$user_id', '$item_id','$quan', 'Added to cart',CURRENT_TIMESTAMP())";
 
               $query_result = mysqli_query($conn, $query)or die(mysqli_error($conn));
               $type=$type."?type=".$ty;
@@ -19,7 +19,7 @@
     ?>
     <html>
     <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
