@@ -16,25 +16,25 @@ if(!isset($_SESSION["email"])){
     <?php 
     require'includes/header.php';      
        $user_id = $_SESSION["id"];
-       $query = "SELECT item_id FROM sql6439142.users_shop WHERE user_id = '$user_id'";
+       $query = "SELECT item_id FROM epiz_30090771_Shop.users_shop WHERE user_id = '$user_id'";
        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
         $m="The details of your order are:  ";
        while($row = mysqli_fetch_array($result)){
            $item_id = $row["item_id"];
-           $query1="SELECT details from sql6439142.shop WHERE id='$item_id'";
+           $query1="SELECT details from epiz_30090771_Shop.shop WHERE id='$item_id'";
            $r= mysqli_query($conn, $query1) or die(mysqli_error($conn));
-           $query2="SELECT quantity,timeoforder from sql6439142.users_shop WHERE item_id='$item_id' and user_id='$user_id' ";
+           $query2="SELECT quantity,timeoforder from epiz_30090771_Shop.users_shop WHERE item_id='$item_id' and user_id='$user_id' ";
            $r1=mysqli_query($conn, $query2) or die(mysqli_error($conn));
            $roww= mysqli_fetch_array($r);
            $roww1= mysqli_fetch_array($r1);
            $m1= $roww['details']." &nbsp; "."quantity:"."&nbsp;".$roww1['quantity']." &nbsp;  "." time of order :"." &nbsp; ".$roww1['timeoforder']."<br>";
            $m=$m.$m1;
          
-           $query1 = "UPDATE sql6439142.users_shop SET status = 'Confirmed' WHERE item_id = '$item_id'";
+           $query1 = "UPDATE epiz_30090771_Shop.users_shop SET status = 'Confirmed' WHERE item_id = '$item_id'";
            $result1 = mysqli_query($conn, $query1) or die(mysqli_error($conn));
        }
-       $query1 = "DELETE FROM sql6439142.users_shop  WHERE user_id ='$user_id' ";
+       $query1 = "DELETE FROM epiz_30090771_Shop.users_shop  WHERE user_id ='$user_id' ";
        $result1 = mysqli_query($conn, $query1) or die(mysqli_error($conn));
        $subject="About your order";
        $headers = 'From: anshulbhatt690@gmail.com'       . "\r\n" .

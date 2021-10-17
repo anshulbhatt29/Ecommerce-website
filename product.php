@@ -26,7 +26,7 @@ require 'includes/check-added-cart.php';
             </div>
             <?php
             $typpe=$_GET['type'];
-               $query = "SELECT id, url,details,price FROM sql6439142.$typpe";
+               $query = "SELECT id, url,details,price FROM epiz_30090771_Shop.$typpe";
 
                $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                while($row = mysqli_fetch_array($result)){

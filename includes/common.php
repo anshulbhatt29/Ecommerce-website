@@ -1,14 +1,17 @@
 <?php
-    $conn = mysqli_connect("sql6.freemysqlhosting.net", "sql6439142", "Epj95A8kdd") or die(mysqli_error($conn));
+    $servername = "sql207.epizy.com";
+    $username = "epiz_30090771";
+    $password = "zLAvEg1FH1rq";
+    $conn = mysqli_connect($servername, $username,$password) or die(mysqli_error($conn));
     
     if(!isset($_SESSION)){
         session_start();
     }
- $sql="CREATE DATABASE IF NOT EXISTS sql6439142";
+ $sql="CREATE DATABASE IF NOT EXISTS epiz_30090771_Shop";
  mysqli_query($conn, $sql);
 
 
-$sql="CREATE TABLE sql6439142.users(
+$sql="CREATE TABLE epiz_30090771_Shop.users(
     id INT(11) PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
@@ -21,7 +24,7 @@ $sql="CREATE TABLE sql6439142.users(
 
 
     
-   $sql="CREATE TABLE sql6439142.shop(
+   $sql="CREATE TABLE epiz_30090771_Shop.shop(
     id INT(11) PRIMARY KEY AUTO_INCREMENT,
     url VARCHAR(255) NOT NULL,
     details VARCHAR(255) NOT NULL,
@@ -30,7 +33,7 @@ $sql="CREATE TABLE sql6439142.users(
 mysqli_query($conn,$sql);
     //value..
 
-    $sql="INSERT INTO sql6439142.shop(id,url,details,price) VALUES  (1,'images_s/shoes1.jpg','Nike shoes1',3000),
+    $sql="INSERT INTO epiz_30090771_Shop.shop(id,url,details,price) VALUES  (1,'images_s/shoes1.jpg','Nike shoes1',3000),
     (2,'images_s/shoes2.jpg','Nike shoes2',3000),
     (3,'images_s/shoes3.jpg','Nike shoes3',3000),
     (4,'images_s/shoes4.jpg','Nike shoes4',3000),
@@ -65,7 +68,7 @@ mysqli_query($conn,$sql);
     
 
 
-$sql="CREATE TABLE sql6439142.users_shop(
+$sql="CREATE TABLE epiz_30090771_Shop.users_shop(
     id INT(11) PRIMARY KEY AUTO_INCREMENT,
     user_id INT(11) NOT NULL,
     item_id INT(11) NOT NULL,
@@ -81,7 +84,7 @@ $sql="CREATE TABLE sql6439142.users_shop(
 
 
 
-   $sql="CREATE TABLE sql6439142.shoes(
+   $sql="CREATE TABLE epiz_30090771_Shop.shoes(
     id INT(11) PRIMARY KEY AUTO_INCREMENT,
     url VARCHAR(255) NOT NULL,
     details VARCHAR(255) NOT NULL,
@@ -89,7 +92,7 @@ $sql="CREATE TABLE sql6439142.users_shop(
 
     mysqli_query($conn, $sql);
 
-    $sql="INSERT INTO sql6439142.shoes(id,url,details,price) VALUES  (1,'images_s/shoes1.jpg','Nike shoes1',3000),
+    $sql="INSERT INTO epiz_30090771_Shop.shoes(id,url,details,price) VALUES  (1,'images_s/shoes1.jpg','Nike shoes1',3000),
     (2,'images_s/shoes2.jpg','Nike shoes2',3000),
     (3,'images_s/shoes3.jpg','Nike shoes3',3000),
     (4,'images_s/shoes4.jpg','Nike shoes4',3000),
@@ -104,14 +107,14 @@ $sql="CREATE TABLE sql6439142.users_shop(
 
      mysqli_query($conn, $sql);
 
-     $sql="CREATE TABLE sql6439142.watches(
+     $sql="CREATE TABLE epiz_30090771_Shop.watches(
         id INT(11) PRIMARY KEY AUTO_INCREMENT,
         url VARCHAR(255) NOT NULL,
         details VARCHAR(255) NOT NULL,
         price INT(11) NOT NULL)";
     
         mysqli_query($conn, $sql);
-        $sql="INSERT INTO sql6439142.watches(id,url,details,price) VALUES  (7,'images_w/watch1.jpg','Fossil watch1',2000),
+        $sql="INSERT INTO epiz_30090771_Shop.watches(id,url,details,price) VALUES  (7,'images_w/watch1.jpg','Fossil watch1',2000),
          (17,'images_w/watch2.jpg','Fossil watch2',2000),
          (18,'images_w/watch3.jpg','Fossil watch3',2000),
          (19,'images_w/watch4.jpg','Fossil watch4',2000),
@@ -121,14 +124,14 @@ $sql="CREATE TABLE sql6439142.users_shop(
          (23,'images_w/watch8.jpg','Fossil watch8',2000)";
     
          mysqli_query($conn, $sql);
-         $sql="CREATE TABLE sql6439142.dresses(
+         $sql="CREATE TABLE epiz_30090771_Shop.dresses(
             id INT(11) PRIMARY KEY AUTO_INCREMENT,
             url VARCHAR(255) NOT NULL,
             details VARCHAR(255) NOT NULL,
             price INT(11) NOT NULL)";
         
             mysqli_query($conn, $sql);
-            $sql="INSERT INTO sql6439142.dresses(id,url,details,price) VALUES  (5,'images_d/dress1.jpg','traditional dress1',2500),
+            $sql="INSERT INTO epiz_30090771_Shop.dresses(id,url,details,price) VALUES  (5,'images_d/dress1.jpg','traditional dress1',2500),
              (8,'images_d/dress2.jpg','traditional dress2',2500),
              (9,'images_d/dress3.jpg','traditional dress3',2500),
              (10,'images_d/dress4.jpg','traditional dress4',2500),

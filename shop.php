@@ -26,7 +26,7 @@ $typpe=$_GET['type'];
 
             </div>
             <?php
-               $query = "SELECT id, url,details,price FROM sql6439142.shop";
+               $query = "SELECT id, url,details,price FROM epiz_30090771_Shop.shop";
 
                $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                while($row = mysqli_fetch_array($result)){
